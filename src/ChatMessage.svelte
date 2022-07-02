@@ -3,8 +3,8 @@
   export let sender;
 
   const messageClass = message.who === sender ? "sent" : "received";
-
-  const avatar = `https://avatars.dicebar.com/api/initials/${message.who}.svg`;
+  // https://avatars.dicebear.com/
+  const avatar = `https://avatars.dicebear.com/api/initials/${message.who}.svg`;
 
   const timeStamp = new Date(message.when);
 </script>

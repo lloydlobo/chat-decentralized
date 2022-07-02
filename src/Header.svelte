@@ -13,9 +13,9 @@
   <!-- Use $ to subscribe to the store in front of username as it's a reactive store -->
   {#if $username}
     <div class="user-bio">
-      <span>Hello <strong>{$username}</strong></span>
+      <span>Hello <strong>{$username.toLocaleUpperCase()}</strong></span>
       <img
-        src={`https://avatars.dicebar.com/api/initials/${$username}.svg`}
+        src={`https://avatars.dicebear.com/api/initials/${$username}.svg`}
         alt="user avatar"
       />
     </div>
