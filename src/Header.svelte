@@ -25,3 +25,32 @@
     <h3>DeCentRaliZed Chat</h3>
   {/if}
 </header>
+
+<style>
+  header {
+    background-color: #10182a;
+    height: 10vh;
+    min-height: 50px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    max-width: 728px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    padding: 10px;
+    box-sizing: border-box;
+
+    border: 1px solid rgb(203 213 225/0.1);
+  }
+  .user-bio {
+    display: flex;
+    align-items: center;
+  }
+  .button-signout {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+</style>
