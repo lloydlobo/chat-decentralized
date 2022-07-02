@@ -20,19 +20,57 @@
   };
 </script>
 
-<label for="username">Username</label>
-<input
-  name="username"
-  bind:value={username}
-  type="text"
-  minlength="3"
-  maxlength="16"
-/>
+<div class="login-wrapper">
+  <div class="inputs-wrapper">
+    <div class="username-wrapper">
+      <label for="username">Username</label>
+      <input
+        name="username"
+        bind:value={username}
+        type="text"
+        minlength="3"
+        maxlength="16"
+      />
+    </div>
+    <div class="password-wrapper">
+      <label for="password">Password</label>
+      <input
+        name="password"
+        bind:value={password}
+        type="password"
+        minlength="8"
+      />
+    </div>
+    <!-- integrity="sha256" -->
+  </div>
 
-<label for="password">Password</label>
-<input name="password" bind:value={password} type="password" minlength="8" />
+  <div class="buttons-wrapper">
+    <button on:click={userLogin} class="button-login">Login</button>
+    <button on:click={userSignup} class="button-login button-sign-up"
+      >Sign Up</button
+    >
+  </div>
+</div>
 
-<button on:click={userLogin} class="button-login">Login</button>
-<button on:click={userSignup} class="button-login button-sign-up"
-  >Sign Up</button
->
+<style>
+  .button-sign-up {
+    background: #0ea5e9;
+  }
+
+  .login-wrapper {
+    display: grid;
+    gap: 1rem;
+    padding-block: 0.5rem;
+    min-height: 33vh;
+  }
+
+  .buttons-wrapper {
+    display: grid;
+    gap: 1rem;
+    margin-block-start: auto;
+  }
+
+  input {
+    padding-inline: 1ch;
+  }
+</style>

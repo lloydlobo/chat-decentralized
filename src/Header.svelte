@@ -22,7 +22,7 @@
     <button class="button-signout" on:click={signOutUser}>Sign out</button>
   {:else}
     <!-- Show this when the user isn't logged in -->
-    <h3>DeCentRaliZed Chat</h3>
+    <h3>Commonchat</h3>
   {/if}
 </header>
 

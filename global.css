@@ -73,6 +73,7 @@ main {
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
+  padding-inline: 1ch;
 }
 
 main::-webkit-scrollbar {
@@ -124,7 +125,7 @@ input::placeholder {
 }
 
 button {
-  background-color: #282c34;
+  background-color: #334155;
   border: none;
   color: white;
   padding: 15px 32px;

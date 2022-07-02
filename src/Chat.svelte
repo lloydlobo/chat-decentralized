@@ -6,6 +6,7 @@
   import Login from "./Login.svelte";
   import ChatMessage from "./ChatMessage.svelte";
   import SEA from "gun/sea";
+  import send from "/public/send.svg";
 
   const db = GUN();
   // <!-- two states -->
@@ -74,7 +75,9 @@
         bind:value={newMessage}
         maxlength="100"
       />
-      <button type="submit" disabled={!newMessage}>💥</button>
+      <button class="button-submit" type="submit" disabled={!newMessage}>
+        <img class="send-icon" src={send} alt="" srcset="" />
+      </button>
     </form>
   {:else}
     <main>
@@ -82,3 +85,24 @@
     </main>
   {/if}
 </div>
+
+<style>
+  .button-submit {
+    position: relative;
+  }
+  .send-icon {
+    position: relative;
+    top: 10%;
+    width: 31.68%;
+    /* height: auto; */
+  }
+
+  img.send-icon {
+    /* fill: blue; */
+    /* color: violet; */
+    filter: invert();
+    opacity: 0.7;
+    background-blend-mode: hard-light;
+    /* background-color: violet; */
+  }
+</style>
